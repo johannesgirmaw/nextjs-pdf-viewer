@@ -1,0 +1,21 @@
+{
+  "name": "demo-ai-pdf-viewer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js",
+    "build": "echo 'skip build'",
+    "preview": "node server.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "ai-pdf-viewer": "file:../javascript/ai-pdf-viewer",
+    "pdfjs-dist": "^4.6.82",
+    "vite": "^7.1.11"
+  }
+}

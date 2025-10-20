@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI PDF Viewer Demo</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "pdfjs-dist": "https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.mjs",
+          "pdfjs-dist/web/pdf_viewer.mjs": "https://unpkg.com/pdfjs-dist@4.6.82/web/pdf_viewer.mjs"
+        }
+      }
+    </script>
+    <style>
+      html,
+      body,
+      #app {
+        height: 100%;
+        margin: 0;
+      }
+      .wrap {
+        height: 100%;
+        padding: 12px;
+        background: #f2f3f5;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/pdfjs-dist@4.6.82/web/pdf_viewer.css"
+    />
+  </head>
+  <body>
+    <div id="app" class="wrap">
+      <ai-pdf-viewer
+        src="/public/file.pdf"
+        worker-src="https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs"
+        document-scroll
+        render-all
+        style="width: 100%"
+      ></ai-pdf-viewer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
