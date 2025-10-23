@@ -12,7 +12,7 @@ TEMPLATE.innerHTML = `
     .textLayer { position: absolute; inset: 0; pointer-events: none; color: transparent; opacity: 0; }
     .textLayer span { position: absolute; transform-origin: 0% 0%; white-space: pre; color: transparent; }
     .textLayer .endOfContent { display: none; }
-    .ai-highlight-layer { position: absolute; inset: 0; pointer-events: none; z-index: 2; background: transparent !important; }
+    .highlight-layer { position: absolute; inset: 0; pointer-events: none; z-index: 2; background: transparent !important; }
     button { appearance: none; background: var(--muted); color: #fff; border: 0; padding: 8px 12px; border-radius: 8px; cursor: pointer; transition: background .15s ease; }
     button:hover { background: var(--muted-2); }
     button:disabled { opacity: 0.5; cursor: default; }
@@ -65,7 +65,7 @@ TEMPLATE.innerHTML = `
   </div>
 `;
 
-export class AIPdfViewerElement extends HTMLElement {
+export class PdfViewerElement extends HTMLElement {
   static get observedAttributes() {
     return ["src", "scale", "worker-src", "document-scroll", "render-all"];
   }
@@ -204,7 +204,7 @@ export class AIPdfViewerElement extends HTMLElement {
     }
     const fitWidth = () => {
       const page = this.shadowRoot?.querySelector(
-        ".ai-pdf-page"
+        ".pdf-page"
       ) as HTMLElement | null;
       const scroller = this.viewerContainer;
       if (!page) return;
@@ -221,7 +221,7 @@ export class AIPdfViewerElement extends HTMLElement {
     };
     const fitPage = () => {
       const page = this.shadowRoot?.querySelector(
-        ".ai-pdf-page"
+        ".pdf-page"
       ) as HTMLElement | null;
       const scroller = this.viewerContainer;
       if (!page) return;
@@ -419,4 +419,4 @@ export class AIPdfViewerElement extends HTMLElement {
   }
 }
 
-customElements.define("ai-pdf-viewer", AIPdfViewerElement);
+customElements.define("pdf-viewer", PdfViewerElement);

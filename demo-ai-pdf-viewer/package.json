@@ -14,7 +14,7 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "ai-pdf-viewer": "file:../javascript/ai-pdf-viewer",
+    "ai-pdf-viewer": "file:../ai-pdf-viewer",
     "pdfjs-dist": "^4.6.82",
     "vite": "^7.1.11"
   }

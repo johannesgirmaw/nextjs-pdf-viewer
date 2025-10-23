@@ -4,7 +4,6 @@ export default defineConfig({
   entry: {
     index: "src/index.ts",
     "web-component/index": "src/web-component/index.ts",
-    "ai/index": "src/ai/index.ts",
   },
   format: ["esm", "cjs"],
   dts: true,
@@ -15,9 +14,5 @@ export default defineConfig({
   splitting: false,
   treeshake: true,
   skipNodeModulesBundle: true,
-  external: [
-    "@tensorflow/tfjs",
-    "@tensorflow-models/universal-sentence-encoder",
-    "pdfjs-dist",
-  ],
+  external: ["pdfjs-dist"],
 });

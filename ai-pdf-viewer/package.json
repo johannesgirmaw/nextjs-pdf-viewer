@@ -1,7 +1,7 @@
 {
   "name": "ai-pdf-viewer",
   "version": "0.1.0",
-  "description": "World-class AI-powered PDF viewer with smooth rendering, search, and pluggable AI (embeddings + RAG).",
+  "description": "World-class PDF viewer with smooth rendering and search functionality.",
   "license": "MIT",
   "author": "Yohannes (and GPT-5)",
   "repository": {
@@ -30,11 +30,6 @@
       "import": "./dist/web-component/index.js",
       "require": "./dist/web-component/index.cjs",
       "types": "./dist/web-component/index.d.ts"
-    },
-    "./ai": {
-      "import": "./dist/ai/index.js",
-      "require": "./dist/ai/index.cjs",
-      "types": "./dist/ai/index.d.ts"
     }
   },
   "scripts": {
@@ -46,25 +41,11 @@
   "keywords": [
     "pdf",
     "viewer",
-    "ai",
-    "rag",
     "search",
     "web-component",
     "pdf.js",
     "typescript"
   ],
-  "peerDependencies": {
-    "@tensorflow-models/universal-sentence-encoder": "^1.3.4",
-    "@tensorflow/tfjs": "^4.20.0"
-  },
-  "peerDependenciesMeta": {
-    "@tensorflow-models/universal-sentence-encoder": {
-      "optional": true
-    },
-    "@tensorflow/tfjs": {
-      "optional": true
-    }
-  },
   "dependencies": {
     "pdfjs-dist": "^4.6.82"
   },

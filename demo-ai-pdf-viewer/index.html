@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI PDF Viewer Demo</title>
+    <title>PDF Viewer Demo</title>
     <script type="importmap">
       {
         "imports": {
@@ -32,13 +32,13 @@
   </head>
   <body>
     <div id="app" class="wrap">
-      <ai-pdf-viewer
+      <pdf-viewer
         src="/public/file.pdf"
         worker-src="https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs"
         document-scroll
         render-all
         style="width: 100%"
-      ></ai-pdf-viewer>
+      ></pdf-viewer>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

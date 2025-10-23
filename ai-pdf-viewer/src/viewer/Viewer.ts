@@ -76,7 +76,7 @@ export class PdfViewer {
     // Create placeholders
     for (let i = 1; i <= numPages; i++) {
       const placeholder = document.createElement("div");
-      placeholder.className = "ai-pdf-page";
+      placeholder.className = "pdf-page";
       placeholder.dataset.index = String(i);
       placeholder.style.position = "relative";
       placeholder.style.width = `${firstViewport.width}px`;
@@ -134,7 +134,7 @@ export class PdfViewer {
     if (this.renderedCanvases.has(pageNumber)) return;
 
     const placeholder = this.pagesWrapper.querySelector(
-      `.ai-pdf-page[data-index="${pageNumber}"]`
+      `.pdf-page[data-index="${pageNumber}"]`
     ) as HTMLElement | null;
     if (!placeholder) return;
 
@@ -162,7 +162,7 @@ export class PdfViewer {
     placeholder.appendChild(canvas);
     // Create highlight layer overlay
     const hl = document.createElement("div");
-    hl.className = "ai-highlight-layer";
+    hl.className = "highlight-layer";
     hl.style.position = "absolute";
     hl.style.left = "0";
     hl.style.top = "0";
@@ -232,7 +232,7 @@ export class PdfViewer {
   private async renderTextLayerForPage(pageNumber: number): Promise<void> {
     if (!this.pdfDoc) return;
     const placeholder = this.pagesWrapper.querySelector(
-      `.ai-pdf-page[data-index="${pageNumber}"]`
+      `.pdf-page[data-index="${pageNumber}"]`
     ) as HTMLElement | null;
     if (!placeholder) return;
     // Create missing highlight layer if not present
@@ -241,7 +241,7 @@ export class PdfViewer {
     const viewport = page.getViewport({ scale: this.scale });
     if (!hl) {
       hl = document.createElement("div");
-      hl.className = "ai-highlight-layer";
+      hl.className = "highlight-layer";
       hl.style.position = "absolute";
       hl.style.left = "0";
       hl.style.top = "0";
