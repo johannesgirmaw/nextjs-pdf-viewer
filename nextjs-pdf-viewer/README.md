@@ -1,6 +1,10 @@
-# pdf-viewer
+# PDF Viewer
 
 🌟 World-class PDF viewer for the web with zoom-proof search highlighting.
+
+[![npm version](https://badge.fury.io/js/ai-pdf-viewer.svg)](https://badge.fury.io/js/ai-pdf-viewer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 
 ## Features
 
@@ -12,11 +16,13 @@
 - ✅ **Document-level scrolling** with `document-scroll` attribute
 - ✅ **Web component** `<pdf-viewer>` and **programmatic API**
 - ✅ **TypeScript**, ESM/CJS builds, npm-installable
+- ✅ **Zero dependencies** (except pdfjs-dist)
+- ✅ **Framework agnostic** - works with React, Vue, Angular, vanilla JS
 
 ## Install
 
 ```bash
-npm install pdf-viewer pdfjs-dist
+npm install ai-pdf-viewer pdfjs-dist
 ```
 
 ## Quick Start (Web Component)
@@ -41,7 +47,7 @@ npm install pdf-viewer pdfjs-dist
     ></pdf-viewer>
 
     <script type="module">
-      import "/node_modules/pdf-viewer/dist/web-component/index.js";
+      import "/node_modules/ai-pdf-viewer/dist/web-component/index.js";
     </script>
   </body>
 </html>
@@ -80,7 +86,7 @@ npm install pdf-viewer pdfjs-dist
 ## Programmatic API
 
 ```ts
-import { PdfViewer, setPdfJsWorkerSrc } from "pdf-viewer";
+import { PdfViewer, setPdfJsWorkerSrc } from "ai-pdf-viewer";
 
 setPdfJsWorkerSrc(
   "https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs"
@@ -106,7 +112,8 @@ await viewer.renderAllPages(); // render all pages (no virtualization)
 ## Development
 
 ```bash
-cd pdf-viewer
+git clone https://github.com/yohannes/ai-pdf-viewer.git
+cd ai-pdf-viewer
 npm install
 npm run build    # Build library
 npm run dev      # Watch mode
@@ -119,6 +126,34 @@ npm run typecheck
 - Requires native ES modules or a bundler
 - Works with Vite, Webpack, Rollup, esbuild
 
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/yourusername/ai-pdf-viewer.git`
+3. Install dependencies: `npm install`
+4. Make your changes
+5. Run tests: `npm run typecheck`
+6. Build: `npm run build`
+7. Submit a pull request
+
+## Roadmap
+
+- [ ] Add text layer support for better accessibility
+- [ ] Add annotation support
+- [ ] Add print functionality
+- [ ] Add more customization options
+- [ ] Add React/Vue/Angular specific examples
+- [ ] Add unit tests
+
 ## License
 
-MIT
+MIT © [Yohannes](https://github.com/yohannes)
+
+## Acknowledgments
+
+- Built on top of [PDF.js](https://mozilla.github.io/pdf.js/) by Mozilla
+- Inspired by modern PDF viewer implementations

@@ -1,5 +1,5 @@
 {
-  "name": "demo-ai-pdf-viewer",
+  "name": "demo-pdf-viewer",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "ai-pdf-viewer": "file:../ai-pdf-viewer",
+    "pdf-viewer": "file:../pdf-viewer",
     "pdfjs-dist": "^4.6.82",
     "vite": "^7.1.11"
   }

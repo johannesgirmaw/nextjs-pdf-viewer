@@ -1,17 +1,17 @@
 {
-  "name": "ai-pdf-viewer",
+  "name": "pdf-viewer",
   "version": "0.1.0",
   "description": "World-class PDF viewer with smooth rendering and search functionality.",
   "license": "MIT",
-  "author": "Yohannes (and GPT-5)",
+  "author": "Yohannes",
   "repository": {
     "type": "git",
-    "url": "git+https://example.com/ai-pdf-viewer.git"
+    "url": "git+https://github.com/yohannes/pdf-viewer.git"
   },
   "bugs": {
-    "url": "https://example.com/ai-pdf-viewer/issues"
+    "url": "https://github.com/yohannes/pdf-viewer/issues"
   },
-  "homepage": "https://example.com/ai-pdf-viewer#readme",
+  "homepage": "https://github.com/yohannes/pdf-viewer#readme",
   "type": "module",
   "sideEffects": false,
   "files": [
