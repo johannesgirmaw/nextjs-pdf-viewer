@@ -47,7 +47,7 @@
     "typescript"
   ],
   "dependencies": {
-    "pdfjs-dist": "^4.6.82"
+    "pdfjs-dist": "^5.4.296"
   },
   "devDependencies": {
     "tsup": "^8.3.0",

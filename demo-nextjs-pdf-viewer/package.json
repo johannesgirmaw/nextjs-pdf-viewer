@@ -14,8 +14,8 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "nextjs-pdf-viewer": "^0.1.0",
-    "pdfjs-dist": "^4.6.82",
+    "pdf-viewer": "file:../nextjs-pdf-viewer",
+    "pdfjs-dist": "^5.4.296",
     "vite": "^7.1.11"
   }
 }
