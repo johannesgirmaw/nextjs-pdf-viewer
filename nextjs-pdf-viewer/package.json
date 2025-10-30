@@ -6,12 +6,12 @@
   "author": "Yohannes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yohannes/nextjs-pdf-viewer.git"
+    "url": "git+https://github.com/johannesgirmaw/nextjs-pdf-viewer.git"
   },
   "bugs": {
-    "url": "https://github.com/yohannes/nextjs-pdf-viewer/issues"
+    "url": "https://github.com/johannesgirmaw/nextjs-pdf-viewer/issues"
   },
-  "homepage": "https://github.com/yohannes/nextjs-pdf-viewer#readme",
+  "homepage": "https://github.com/johannesgirmaw/nextjs-pdf-viewer#readme",
   "type": "module",
   "sideEffects": false,
   "files": [

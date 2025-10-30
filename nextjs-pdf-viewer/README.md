@@ -1,6 +1,30 @@
-# PDF Viewer
+# nextjs-pdf-viewer
 
-🌟 World-class PDF viewer for the web with zoom-proof search highlighting.
+Professional, framework-agnostic PDF viewer with smooth rendering, accurate zoom-proof highlights, and full-text search. Ships as a web component and a programmatic API. Optimized for Next.js but works with any bundler.
+
+## Contributing & Feedback
+
+We welcome issues, discussions, and pull requests.
+
+- Feedback/ideas: open a GitHub Discussion or Issue with the label `enhancement`.
+- Bug reports: include steps to reproduce, expected vs actual behavior, browser/OS, and logs/screenshots.
+- PRs: small, focused changes are best. Add context to the description and link related issues.
+
+Development quick start:
+
+```bash
+git clone https://github.com/yourusername/nextjs-pdf-viewer.git
+cd nextjs-pdf-viewer
+npm install
+npm run dev   # watch builds to dist/
+```
+
+Coding guidelines:
+
+- Keep code readable, avoid deep nesting, prefer early returns.
+- Strongly typed APIs; avoid `any` in public surfaces.
+- Only meaningful comments; avoid obvious ones.
+- Verify no linter/type errors. Keep bundle size reasonable.
 
 [![npm version](https://badge.fury.io/js/ai-pdf-viewer.svg)](https://badge.fury.io/js/ai-pdf-viewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,10 +46,12 @@
 ## Install
 
 ```bash
-npm install ai-pdf-viewer pdfjs-dist
+npm install nextjs-pdf-viewer pdfjs-dist
 ```
 
-## Quick Start (Web Component)
+## Usage
+
+### Web Component (vanilla HTML)
 
 ```html
 <!DOCTYPE html>
@@ -47,10 +73,31 @@ npm install ai-pdf-viewer pdfjs-dist
     ></pdf-viewer>
 
     <script type="module">
-      import "/node_modules/ai-pdf-viewer/dist/web-component/index.js";
+      import "/node_modules/nextjs-pdf-viewer/dist/web-component/index.js";
     </script>
   </body>
 </html>
+```
+
+### Next.js (App Router)
+
+```tsx
+// app/page.tsx
+"use client";
+import { useEffect } from "react";
+
+export default function Page() {
+  useEffect(() => {
+    import("nextjs-pdf-viewer/dist/web-component/index.js");
+  }, []);
+  return (
+    <pdf-viewer
+      src="/file.pdf"
+      worker-src="https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs"
+      style={{ display: "block", height: "100vh", width: "100%" }}
+    />
+  );
+}
 ```
 
 ### Web Component Attributes
@@ -83,10 +130,10 @@ npm install ai-pdf-viewer pdfjs-dist
 - Fit width / Fit page buttons
 - Keyboard: Ctrl/Cmd + +/−
 
-## Programmatic API
+### Programmatic API
 
 ```ts
-import { PdfViewer, setPdfJsWorkerSrc } from "ai-pdf-viewer";
+import { PdfViewer, setPdfJsWorkerSrc } from "nextjs-pdf-viewer";
 
 setPdfJsWorkerSrc(
   "https://unpkg.com/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs"
@@ -112,8 +159,8 @@ await viewer.renderAllPages(); // render all pages (no virtualization)
 ## Development
 
 ```bash
-git clone https://github.com/yohannes/ai-pdf-viewer.git
-cd ai-pdf-viewer
+git clone https://github.com/yourusername/nextjs-pdf-viewer.git
+cd nextjs-pdf-viewer
 npm install
 npm run build    # Build library
 npm run dev      # Watch mode
@@ -124,7 +171,13 @@ npm run typecheck
 
 - Modern browsers with ES2020+ support
 - Requires native ES modules or a bundler
-- Works with Vite, Webpack, Rollup, esbuild
+- Works with Vite, Webpack, Rollup, esbuild, Next.js
+
+## Troubleshooting
+
+- 404 for PDF: ensure `src` points to a reachable path (e.g., `/public/file.pdf` in Next.js)
+- PDF.js worker: set `worker-src` to a valid URL (CDN or self-hosted)
+- CORS: when loading remote PDFs, allow cross-origin or proxy via your server
 
 ## Contributing
 
@@ -133,7 +186,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/ai-pdf-viewer.git`
+2. Clone your fork: `git clone https://github.com/yourusername/nextjs-pdf-viewer.git`
 3. Install dependencies: `npm install`
 4. Make your changes
 5. Run tests: `npm run typecheck`
