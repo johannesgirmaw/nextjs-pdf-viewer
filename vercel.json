@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "demo-nextjs-pdf-viewer/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/demo-nextjs-pdf-viewer/index.html" },
+    { "src": "/(.*)", "dest": "/demo-nextjs-pdf-viewer/$1" }
+  ]
+}
