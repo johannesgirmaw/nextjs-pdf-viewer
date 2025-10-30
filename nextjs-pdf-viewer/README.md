@@ -2,6 +2,10 @@
 
 Professional, framework-agnostic PDF viewer with smooth rendering, accurate zoom-proof highlights, and full-text search. Ships as a web component and a programmatic API. Optimized for Next.js but works with any bundler.
 
+## Live Demo
+
+Try it here: https://nextjs-pdf-viewer-git-main-yohannesgs-projects.vercel.app/
+
 ## Contributing & Feedback
 
 We welcome issues, discussions, and pull requests.
